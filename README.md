@@ -16,9 +16,9 @@ LICENSE:开源许可证,这里使用的是github自动创建的<br>
 XXXXXXX:开源框架需要包含的源文件目录,<br>
 xxxxxxx.podspec:.podspec文件的作用是为了让CocoaPods搜索引擎知道该代码的作者、版本号、概要、描述、源代码地址、部署版本、依赖的框架等描述信息。<br>
 README.md:在github上创建时自带的说明文件,可有可无<br>
-Example:示例工程,可有可无<br>  
-
-  创建.podspec文件,使用`pod spec create xxxx`命令创建.podspec文件<br>
+Example:示例工程,可有可无<br> 
+  创建.podspec文件,使用`pod spec create xxxx`命令创建.podspec文件<br>   
+  
 .podspec文件说明
 ----
 Pod::Spec.new do |s|<br>
@@ -41,4 +41,9 @@ Pod::Spec.new do |s|<br>
  s.dependency 'WechatOpenSDK'`依赖的第三方库`<br>
  s.dependency 'WeiboSDK'`多个时分开填写`<br>
  end<br>
+ 发布到CocoaPods
+ ----
+ 使用`pod spec lint xxxxxx.podspec --verbose --use-libraries --allow-warnings`命令来验证.podspec文件  
+ `--verbose`显示验证时的详细信息 `--use-libraries`依赖库（s.dependency）包含了.a静态库会造成一些错误,虽然不影响Pod的使用,但是验证会不通过,使用此命令来让验证通过  `--allow-warnings`使用该命令来允许警告出现
+ 验证通过后使用`pod trunk push xxxxxx.podspec --verbose --use-libraries --allow-warnings`命令来发布到CocoaPods
  
