@@ -1,9 +1,9 @@
 
-#CocoaPods的使用<br>
+# CocoaPods的使用<br>
 
-##将自己的代码上传到CocoaPods上作为第三方使用<br>
+## 将自己的代码上传到CocoaPods上作为第三方使用<br>
 
-##目录结构:<br>
+## 目录结构:<br>
 
 >git仓库目录<br>
 >>LICENSE<br>
@@ -19,7 +19,7 @@ README.md:在github上创建时自带的说明文件,可有可无<br>
 Example:示例工程,可有可无<br> 
   创建.podspec文件,使用`pod spec create xxxx`命令创建.podspec文件<br>   
   
-##.podspec文件说明<br>
+## .podspec文件说明<br>
 
 Pod::Spec.new do |s|<br>
  s.name = "MAFShareTool"`开源框架在CocoaPods上可以搜索到的名称`<br>
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|<br>
  s.dependency 'WechatOpenSDK'`依赖的第三方库`<br>
  s.dependency 'WeiboSDK'`多个时分开填写`<br>
  end<br>
- ##发布到CocoaPods<br>
+ ## 发布到CocoaPods<br>
 
  使用`pod spec lint xxxxxx.podspec --verbose --use-libraries --allow-warnings`命令来验证.podspec文件  
  `--verbose`显示验证时的详细信息 `--use-libraries`依赖库（s.dependency）包含了.a静态库会造成一些错误,虽然不影响Pod的使用,但是验证会不通过,使用此命令来让验证通过  `--allow-warnings`使用该命令来允许警告出现<br>
