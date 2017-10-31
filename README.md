@@ -30,7 +30,7 @@ Pod::Spec.new do |s|<br>
                     DESC`详细描述`<br>
  s.homepage = "https://github.com/LDeath/ShareTool"`个人首页`<br>
  s.license = { :type => "MIT", :file => "LICENSE" }`开源许可证的指定`<br>
- s.author = { "高赛" => "395765302@qq.com"}`作者描述`<br>
+ s.author = { "xx" => "xxxxx@qq.com"}`作者描述`<br>
  s.ios.deployment_target = "7.0"`支持的ios版本`<br>
  s.source = { :git => "https://github.com/LDeath/ShareTool.git", :tag => s.version }`项目的地址`<br>
  s.source_files = 'MAFShareTool/**/**.{h,m}'`需要包含的源文件`<br>
